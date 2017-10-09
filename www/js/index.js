@@ -4,6 +4,10 @@ var launched_count = 0;
 
 // here is ready listener
 document.addEventListener("deviceready", onDeviceReady, false);
+	// here is resume listener
+	document.addEventListener("resume", onResume, false);
+        // here is pause listener
+	document.addEventListener("pause", onPause, false);
 		
 	
 function updateDisplay() {
@@ -16,10 +20,7 @@ function updateDisplay() {
 // device APIs are available
 //
     function onDeviceReady() {
-	// here is resume listener
-	document.addEventListener("resume", onResume, false);
-        // here is pause listener
-	document.addEventListener("pause", onPause, false);
+
 	
 	launched_count++;
 	updateDisplay();
