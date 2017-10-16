@@ -26,22 +26,37 @@ function updateDisplay() {
 	updateDisplay();
 	    
 	console.log("device ready");
+        storeItem("feeling", "tired");
+        storeItem("hair", "brown");
+        storeItem("beard", "messy");
+        storeItem("weather", "weird");
+        storeItem("date", "16th oct 2017");
+        
+        document.getElementById("storage1").innerHTML = "Feeling: " + getItem("feeling");
     }
 
 
     function onPause() {
-	
+	/*
 	paused_count++;
 	updateDisplay();
 	    
-	console.log("pause");
+	console.log("pause");*/
     }
 	
 
     function onResume() {
-		
+		/*
 	resumed_count++;
 	updateDisplay();
 	    
-	console.log("resume");
+	console.log("resume");*/
+    }
+
+    function storeItem(key, item){
+        window.localStorage.setItem( key, value );
+    }
+
+    function getItem(key){
+        return window.localStorage.getItem( key );
     }
